@@ -1,0 +1,15 @@
+apiVersion: autoexpose.sinlee.com/v1alpha1
+kind: App
+metadata:
+  labels:
+    app.kubernetes.io/name: app
+    app.kubernetes.io/instance: app-sample
+    app.kubernetes.io/part-of: app-controller
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: app-controller
+  name: app-sample
+spec:
+  image: nginx:latest
+  replicas: 3
+  ingress: true #会被修改为true
+  service: true #成功
